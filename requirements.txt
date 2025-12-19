@@ -1,0 +1,6 @@
+openai-agents>=0.6.4
+nest-asyncio>=1.6.0
+pydantic>=2.5.0
+prompt-toolkit>=3.0.0
+rich>=13.0.0
+openai>=2.14.0
