@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentix"
+version = "0.1.0"
+description = "Agentix — Agentic AI powered OS CLI"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Najaf Ali" }
+]
+
+dependencies = [
+  "rich",
+  "typer",
+  "prompt-toolkit",
+  "pydantic",
+  "nest-asyncio",
+  "agents"
+]
+
+[project.scripts]
+agentix = "agentix.main:main"
