@@ -138,8 +138,21 @@ async def cli():
             console.print("\n[bold cyan]Goodbye from Agentix 👋[/bold cyan]")
             break
 
+# Entry Points
 # --------------------
-# Entry
-# --------------------
+async def async_main():
+    """Async entry point."""
+    await cli()
+
+def main():
+    """Main entry point for console_scripts."""
+    try:
+        asyncio.run(async_main())
+    except KeyboardInterrupt:
+        print("\n👋 Exiting Agentix CLI")
+    except Exception as e:
+        console.print(f"[red]Fatal error: {e}[/red]")
+        sys.exit(1)
+
 if __name__ == "__main__":
-    asyncio.run(cli())
+    main()
